@@ -89,15 +89,15 @@ class WeightTrackerScreen extends StatelessWidget {
             FocusScope.of(context).requestFocus(FocusNode());
             TimeOfDay? time = await showTimePicker(
               context: context,
-              initialTime: const TimeOfDay(hour: 8, minute: 0),
+              initialTime:  TimeOfDay.now(),
             );
             if (time != null) {
               try{
                 double weight = double.parse(weightController.text);
                 context.read<TrackerBloc>().add(RecordWeight(weight,time,nameController.text));
                 context.read<TrackerBloc>().add(SaveUserData(nameController.text, time));
-
                 weightController.clear();
+                nameController.clear();
               }catch(e){
                 print(e);
                 ScaffoldMessenger.of(context).showSnackBar( SnackBar(
