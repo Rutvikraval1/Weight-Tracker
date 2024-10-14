@@ -4,7 +4,8 @@ A new Flutter project.
 
 ## Getting Started
 # ----------------------------------
-[Download Demo APK](/asset/apk/app-release.apk)
+
+[//]: # ([Download Demo APK]&#40;/asset/apk/app-release.apk&#41;)
 ------Use Bloc
 ------Use Sqlite Database
 ------Use Notification
